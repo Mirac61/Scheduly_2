@@ -13,14 +13,16 @@ using System.IO;
 
 
 namespace Scheduly_2.Resources.Views
-{   
+{
     public class Login : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.login_page);   
+            SetContentView(Resource.Layout.login_page);
         }
+
+
         public bool Benutzer(string benutzername, string email)
         {
             var benutzer = User.Database.Table<User.UserD>().FirstOrDefault(u => u.Username == benutzername);
@@ -37,6 +39,7 @@ namespace Scheduly_2.Resources.Views
                 return false;
             }
         }
+
         public bool legitimerbenutzer(string benutzernameOderEmail, string passwort)
         {
             var benutzer = User.Database.Table<User.UserD>().FirstOrDefault(u =>
@@ -71,14 +74,10 @@ namespace Scheduly_2.Resources.Views
             }
             else
             {
-                
+                Toast.MakeText(this, "Ungültige Anmeldeinformationen. Bitte versuchen Sie es erneut.", ToastLength.Short).Show();
             }
-            
+
         }
 
-        public void Registrierung(View view)
-        {
-            
-        }
     }
 }

@@ -8,8 +8,8 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:minWidth="25px"
-    android:minHeight="25px">
-    // Inspiriert von https://stacktips.com/articles/android-login-screen-using-xamarin
+    android:minHeight="25px"
+    xmlns:local="clr-namespace:Scheduly_2.Resources.Views">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -18,15 +18,13 @@
         android:orientation="vertical"
         >
 
-        
-
         <EditText
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:background="@android:color/white"
-            android:hint="Benutzername oder E-Mail"/>
+            android:hint="Benutzername" />
 
         <EditText
             android:id="@+id/password"
@@ -35,27 +33,26 @@
             android:padding="5dp"
             android:background="@android:color/white"
             android:inputType="textPassword"
-            android:hint="Passwort"/>
+            android:hint="Passwort" />
 
-        <Button
-            android:id="@+id/login"
+        <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
-android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#307FC1"
-            android:text="Login"
-            android:textColor="@android:color/white"
-            android:onClick="LoginButton_Clicked"/>
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@android:color/white"
+            android:inputType="textEmailAddress"
+            android:hint="E-Mail" />
 
         <Button
-    android:id="@+id/registrierungButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Registrierung"
-    android:textColor="@color/colorPrimary"
-    android:background="@android:color/transparent"
-    android:layout_gravity="center_vertical|center_horizontal"
-    android:onClick="RegistrierungButton_Clicked" />
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrieren"
+            android:textColor="@color/colorPrimary"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:onClick="OnRegisterClicked" />
 
     </LinearLayout>
 
